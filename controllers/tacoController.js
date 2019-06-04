@@ -4,9 +4,14 @@ const tacos = require("../models/tacoModel");
 
 router.get("/", (req, res) => {
   tacos.all((result) => {
-    console.log(result);
     res.render("index", {tacos: result});
   })
+});
+
+router.post("/", (req, res) => {
+  tacos.add(req.body, () => {
+    res.redirect("/");
+  });
 });
 
 module.exports = router;

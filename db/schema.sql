@@ -6,6 +6,7 @@ USE taco_truck_db;
 CREATE TABLE tacos
 (
 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name varchar(100) NOT NULL,
     shell_type varchar(50) NOT NULL,
 	main_ingredient varchar(50) NOT NULL,
 	cheese varchar(50) NOT NULL,

@@ -1,6 +1,6 @@
-INSERT INTO tacos (shell_type, main_ingredient, cheese, toppings) 
+INSERT INTO tacos (name, shell_type, main_ingredient, cheese, toppings) 
 VALUES 
-("corn", "ixtapa", "cheddar", "sour cream, cilantro"),
-("flour", "tofu", "monterey jack", "guacamole, pico de gallo"),
-("flour", "beef fajita", "cheddar", "cilantro, tomatoes");
+("Bob","corn", "ixtapa", "cheddar", "sour cream, cilantro"),
+("Suzy","flour", "tofu", "monterey jack", "guacamole, pico de gallo"),
+("Jimbo","flour", "beef fajita", "cheddar", "cilantro, tomatoes");
 
