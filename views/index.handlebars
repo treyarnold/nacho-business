@@ -1,1 +1,9 @@
 <h1>Lets make tacos</h1>
+{{#each tacos}}
+  <p>{{this.shell_type}}</p>
+  <p>{{this.main_ingredient}}</p>
+  <p>{{this.cheese}}</p>
+  <p>{{this.toppings}}</p>
+  <p>{{this.picked_up}}</p>
+  <br>
+{{/each}}

@@ -9,5 +9,6 @@ CREATE TABLE tacos
     shell_type varchar(50) NOT NULL,
 	main_ingredient varchar(50) NOT NULL,
 	cheese varchar(50) NOT NULL,
-    toppings varchar(255) NOT NULL
+    toppings varchar(255) NOT NULL,
+    picked_up bool default false
 );
