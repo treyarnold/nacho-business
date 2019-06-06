@@ -4,14 +4,15 @@
     <div class="col-md-3 text-center order-2 order-md-1">
       <h2 class="py-3">Tacos Ready for Pickup</h2>
       {{#each tacos}}
-      {{#unless this.picked_up}}
-      <p><strong>{{this.name}}</strong> <button class="btn-info ml-5">Pickup</button></p>
-      <p>{{this.main_ingredient}} taco in a {{this.shell_type}} torilla with </p>
-      <p>{{this.cheese}} and {{this.toppings}}</p>
-      <br>
-      {{/unless}}
+        {{#unless this.picked_up}}
+          <p><strong>{{this.name}}</strong> <button class="btn-info ml-5">Pickup</button></p>
+          <p>{{this.main_ingredient}} taco in a {{this.shell_type}} torilla with </p>
+          <p>{{this.cheese}} and {{this.toppings}}</p>
+          <br>
+        {{/unless}}
       {{/each}}
     </div>
+    
     <div class="col-md-6 order-1 order-md-2">
       <h2 class="py-3 text-center">Create your dream taco</h2>
       <form action="/" method="post">
@@ -28,9 +29,11 @@
         <div class="form-group">
           <label class="ml-4" for="tortilla">Filling:</label>
           <label class="radio-inline ml-2"><input type="radio" name="mainIngredient" value="ixtapa">Ixtapa</label>
-          <label class="radio-inline ml-2"><input type="radio" name="mainIngredient" value="beef fajita">Beef Fajita</label>
+          <label class="radio-inline ml-2"><input type="radio" name="mainIngredient" value="beef fajita">Beef
+            Fajita</label>
           <label class="radio-inline ml-2"><input type="radio" name="mainIngredient" value="carnitas">Carnitas</label>
-          <label class="radio-inline ml-2"><input type="radio" name="mainIngredient" value="chicken fajita">Chicken Fajita</label>
+          <label class="radio-inline ml-2"><input type="radio" name="mainIngredient" value="chicken fajita">Chicken
+            Fajita</label>
           <label class="radio-inline ml-2"><input type="radio" name="mainIngredient" value="tofu">Tofu</label>
         </div>
         <div class="form-group">
@@ -42,11 +45,13 @@
         </div>
         <div class="form-group">
           <label class="ml-4" for="tortilla">Toppings:</label>
-          <label class="checkbox-inline ml-2"><input type="checkbox" name="toppings" value="sour cream">Sour Cream</label>
+          <label class="checkbox-inline ml-2"><input type="checkbox" name="toppings" value="sour cream">Sour
+            Cream</label>
           <label class="checkbox-inline ml-2"><input type="checkbox" name="toppings" value="quacamole">Quacamole</label>
           <label class="checkbox-inline ml-2"><input type="checkbox" name="toppings" value="corn">Corn</label>
           <label class="checkbox-inline ml-2"><input type="checkbox" name="toppings" value="cilantro">Cilantro</label>
-          <label class="checkbox-inline ml-2"><input type="checkbox" name="toppings" value="pico de gallo">Pico de Gallo</label>
+          <label class="checkbox-inline ml-2"><input type="checkbox" name="toppings" value="pico de gallo">Pico de
+            Gallo</label>
           <label class="checkbox-inline ml-2"><input type="checkbox" name="toppings" value="tomatoes">Tomatoes</label>
         </div>
         <button class="btn btn-success align-center" type="submit">Taco ME!!!</button>

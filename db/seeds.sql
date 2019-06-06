@@ -3,4 +3,3 @@ VALUES
 ("Bob","corn", "ixtapa", "cheddar", "sour cream, cilantro"),
 ("Suzy","flour", "tofu", "monterey jack", "guacamole, pico de gallo"),
 ("Jimbo","flour", "beef fajita", "cheddar", "cilantro, tomatoes");
-
