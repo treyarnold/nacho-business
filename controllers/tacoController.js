@@ -14,4 +14,10 @@ router.post("/", (req, res) => {
   });
 });
 
+router.put("/", (req, res) => {
+  tacos.update(req.body.id, () => {
+    res.redirect("/");
+  });
+});
+
 module.exports = router;

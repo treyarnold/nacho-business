@@ -1,8 +1,11 @@
 const express = require("express");
+const methodOverride = require('method-override');
+
 
 const PORT = process.env.PORT || 8080;
 
 const app = express();
+app.use(methodOverride('_method'));
 
 app.use(express.static("public"));
 

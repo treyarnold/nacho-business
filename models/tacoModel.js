@@ -6,14 +6,19 @@ const tacos = {
       callBack(result);
     });
   },
-  add: function (body, callback) {
+  add: function (body, callBack) {
     let topping;
     if (Array.isArray(body.toppings)) topping = body.toppings.join(", ")
     else topping = body.toppings;
     const order = `"${body.orderName}", "${body.tortilla}", "${body.mainIngredient}", "${body.cheese}", "${topping}"`;
     orm.add("tacos", "(name, shell_type, main_ingredient, cheese, toppings)", order, () => {
-      callback();
-    })
+      callBack();
+    });
+  },
+  update: function(id, callBack) {
+    orm.update("tacos", id, () => {
+      callBack();
+    });
   },
 }
 

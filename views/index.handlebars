@@ -1,14 +1,20 @@
-<h1>Lets make tacos</h1>
+<h1 class="display-2 text-center my-5">
+  <span class="bg-success text-white">Its</span>
+  <span class="text-success">Nacho</span>
+  <span class="bg-danger text-white">Business!!!</span>
+</h1>
 <div class="container-fluid pt-3">
   <div class="row">
     <div class="col-md-3 text-center order-2 order-md-1">
       <h2 class="py-3">Tacos Ready for Pickup</h2>
       {{#each tacos}}
         {{#unless this.picked_up}}
-          <p><strong>{{this.name}}</strong> <button class="btn-info ml-5">Pickup</button></p>
-          <p>{{this.main_ingredient}} taco in a {{this.shell_type}} torilla with </p>
-          <p>{{this.cheese}} and {{this.toppings}}</p>
-          <br>
+          <div class="mb-3 rounded-pill bg-success text-white text-center">
+            <p><strong>{{this.name}}</strong></p>
+            <form action="/?_method=PUT" method="post"><button name="id" value={{this.id}} type="submit" class="mb-3 btn-info">Pickup</button></form>
+            <p>{{this.main_ingredient}} taco in a {{this.shell_type}} torilla with </p>
+            <p>{{this.cheese}} and {{this.toppings}}</p>
+          </div>
         {{/unless}}
       {{/each}}
     </div>
@@ -59,6 +65,15 @@
     </div>
     <div class="col-md-3 align-center order-3">
       <h2 class="py-3">Orders already picked up</h2>
+      {{#each tacos}}
+        {{#if this.picked_up}}
+          <div class="bg-danger text-white text-center mb-3 rounded-pill">
+            <p>{{this.main_ingredient}} taco in a {{this.shell_type}} torilla with </p>
+            <p>{{this.cheese}} and {{this.toppings}}</p>
+            <p><strong>Picked up by {{this.name}}</strong></p>
+          </div>          
+        {{/if}}
+      {{/each}}
     </div>
   </div>
 </div>
